@@ -1,6 +1,6 @@
 # CS 260 Notes
 
-[My startup](https://simon.cs260.click)
+[My startup](https://github.com/Peppermint6443/startup.git)
 
 ## Helpful links
 
@@ -8,10 +8,12 @@
 - [Canvas](https://byu.instructure.com)
 - [MDN](https://developer.mozilla.org)
 
-## AWS Notes
+## Simon Notes
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### Simon-html notes
+* Each page of your webpage has a separate .html file, all of which interact
+* Adding hyperlinks to other websites and other pages of your webpage seems 1) very easy, and 2) essential to having a good webpage
 
-## HTML Notes
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+#### Simon-css notes
+* You can use the "mouse" button (see image below) to select different elements of the page. I've played around with the inspect portion of a webpage in the past, but I have always searched around in the code until I (hopefully) found the thing I was looking for. The select tool is much more handy. 
+* You can add/remove .css styling modularly, meaning you can disable parts of it for a time if you need to
