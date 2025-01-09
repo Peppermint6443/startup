@@ -14,7 +14,7 @@
 * Each page of your webpage has a separate .html file, all of which interact
 * Adding hyperlinks to other websites and other pages of your webpage seems 1) very easy, and 2) essential to having a good webpage
 * Each .html file has a head, a body, and a footer
-* It looks like a slash ends the section (i.e. '<head>' starts the head section, and '</head>' ends the head section)
+* It looks like a slash ends the section (i.e. `<head>` starts the head section, and `</head>` ends the head section)
 * Indentation seems to be important, which isn't new, but should be noted
 * Looks like there are lots of abbreviations that I will need to learn and know off the top of my head
 
