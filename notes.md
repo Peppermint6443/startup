@@ -19,5 +19,5 @@
 * Looks like there are lots of abbreviations that I will need to learn and know off the top of my head
 
 #### Simon-css notes
-* You can use the "mouse" button (see image below) to select different elements of the page. I've played around with the inspect portion of a webpage in the past, but I have always searched around in the code until I (hopefully) found the thing I was looking for. The select tool is much more handy. 
+* You can select different page elements using the "mouse" button (see image below). I've played around with the inspect portion of a webpage in the past, but I have always searched around in the code until I (hopefully) found what I was looking for. The select tool is much more handy. 
 * You can add/remove .css styling modularly, meaning you can disable parts of it for a time if you need to
