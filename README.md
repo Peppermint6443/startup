@@ -1,4 +1,4 @@
-# Your startup name here
+# Filament Minder
 
 [My Notes](notes.md)
 
