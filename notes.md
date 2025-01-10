@@ -27,3 +27,5 @@
 #### Simon-react
 * The file structure has been cleaned up significantly, it looks like there is a lot of file organization that can happen
 * It looks like the react things are created with .jsx files
+* Javascript looks like it reads similarly to Python... not exactly the same though, and it needs semicolons
+* Based on the language breakdown of the repository, there are *a lot* of files that are written in javascript, which makes sense, as a webpage looks a lot better as the interactivity of the webpage increases
