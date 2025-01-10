@@ -30,15 +30,17 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ### Design
 
-![Design image](images/placeholder.png)
+![Design image](images/website_sketch.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Above is a sketch of what my webpage might look like, created using [ningamock.com](https://ninjamock.com/home/index). Once you log in, the home page would show your rolls of filament that you have included, and you can select them, read the usage rates, what it was used for, etc. 
 
 ```mermaid
 sequenceDiagram
     actor You
+    actor Filament
     actor Website
-    You->>Website: Replace this with your design
+    You->>Filament: You print, and record how much filament you use.
+    Filament->>Website: You enter the roll/color and amount used, website remembers.
 ```
 
 ### Key features
