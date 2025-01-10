@@ -23,6 +23,7 @@
 * You can add/remove .css styling modularly, meaning you can disable parts of it for a time if you need to
 * There are much fewer indentations in .css files; instead, each individual element seems to correspond to a specific code chunk, which stipulates things like color, border, shadow, etc.
 * You can select different page elements using the "mouse" button (see image below). I've played around with the inspect portion of a webpage in the past, but I have always searched around in the code until I (hopefully) found what I was looking for. The select tool is much more handy. 
+
 ![Mouse Button](mouse_button_screenshot.png)
 
 #### Simon-react
