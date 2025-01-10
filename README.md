@@ -37,8 +37,8 @@ Above is a sketch of what my webpage might look like, created using [ningamock.c
 ```mermaid
 sequenceDiagram
     actor You
-    actor Filament
-    actor Website
+    participant Filament
+    participant Website
     You->>Filament: You print, and record how much filament you use.
     Filament->>Website: You enter the roll/color and amount used, website remembers.
 ```
