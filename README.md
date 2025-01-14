@@ -12,14 +12,18 @@ As a 3D-printing enthusiast, I often switch between different filament types and
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] Proper use of Markdown
-- [ ] A concise and compelling elevator pitch
-- [ ] Description of key features
-- [ ] Description of how you will use each technology
+- [x] A concise and compelling elevator pitch
+- [x] Description of key features
+- [x] Description of how you will use each technology
 - [x] One or more rough sketches of your application. Images must be embedded in this file using Markdown image references.
 
 ### Elevator pitch
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Are you tire of not knowing if you have enough filament to complete the super cool 3D print you just found? Imagine starting a print you are super excited for, only to have the filament run out right before the print finishes. Do you leave it on your printer until new filament arrives? Do you waste the filament you had left? Luckily, with Roll Call, you can avoid this predicament!
+
+Roll Call is an easy to use website that keeps track of your filament so you don't have to! Roll Call allows you to track the amount of filament left on each roll (including color, brand, type, and cost), log print history, and manage your filament stores. 
+
+Don't wait until you ruin another print, let Roll Call take attendance, you focus on creating the next big thing!
 
 ### Design
 
