@@ -27,39 +27,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Above is a sketch of what my webpage might look like, created using [ninjamock.com](https://ninjamock.com/home/index). Once you log in, the home page would show your rolls of filament that you have included, and you can select them, read the usage rates, what it was used for, etc. 
 
-```mermaid
-sequenceDiagram
-    actor You
-    participant Filament
-    participant Website
-    You->>Filament: You print, and record how much filament you use.
-    Filament->>Website: You enter the roll/color and amount used, website remembers.
-```
+
 > [!NOTE]
 > TO DO: I need to add a diagram (probably a drawn image) to show how people will interact with the website.
 
 ### Key features
 
-> [!NOTE]
-> TO DO: Add key features!
-
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure Login
+- Data storage connected to your account
+- Ability to add rolls of filament, specifying Brand, color, starting amount, type, price, etc.
+- Ability to add print mass to update the roll, with a name for the print for recording
+- Ability to see a history of prints for each roll
+- Display all of the rolls, with a status bar showing how much has been used/is left
+- If time: ability to predict the cost of a print based on the cost of the roll and the starting amount
 
 ### Technologies
-
-> [!NOTE]
-> TO DO: Add technology applications!
-
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
-- **Service** - Description here
-- **DB/Login** - Description here
-- **WebSocket** - Description here
+- **HTML** - Used for main structure of the webpage. Has 4 pages: Login, dashboard, a roll page, and statistics (amount spent per month, total amount used, etc.). If time, I will add a fifth page for print cost prediction. 
+- **CSS** - Styling that looks good on any size device. Good use of color, spacing, and design elements.
+- **React** - Login, display your rolls of filament, adding prints to a roll of filament.
+- **Service** - Add roll, update roll, get roll history, share roll.
+- **DB/Login** - Store users, rolls of filament, and related information in the database. Account creation, and all data is securely saved.
+- **WebSocket** - Ability to recommend a roll of filament, also potential to add friends and compare filament usage.
 
 ## 🚀 AWS deliverable
 
