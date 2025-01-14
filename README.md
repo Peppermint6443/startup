@@ -47,7 +47,7 @@ I am going to use the required technologies in the following ways.
 - **HTML** - Used for the main structure of the webpage. Has 4 pages: Login, dashboard, a roll page, and statistics (amount spent per month, total amount used, etc.). If time, I will add a fifth page for print cost prediction. 
 - **CSS** - Styling that looks good on any size device. Good use of color, spacing, and design elements.
 - **React** - Login, display your rolls of filament, adding prints to a roll of filament.
-- **Service** - Add roll, update roll, get roll history, share roll.
+- **Service** - Add roll, update roll, get roll history, share roll. I also want to include an API to include a "print of the day" from Thingiverse or another similar website.
 - **DB/Login** - Store users, rolls of filament, and related information in the database. Account creation is in use, and all data is securely saved.
 - **WebSocket** - Ability to recommend a roll of filament, also potential to add friends and compare filament usage.
 
