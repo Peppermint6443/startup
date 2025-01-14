@@ -27,9 +27,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Above is a sketch of what my webpage might look like, created using [ninjamock.com](https://ninjamock.com/home/index). Once you log in, the home page would show your rolls of filament that you have included, and you can select them, read the usage rates, what it was used for, etc. 
 
-
-> [!NOTE]
-> TO DO: I need to add a diagram (probably a drawn image) to show how people will interact with the website.
+![Process Image](images/block_diagram.jpg)
 
 ### Key features
 
