@@ -5,7 +5,7 @@
 As a 3D printing enthusiast, I often switch between different filament types and colors to best fit my usage. I might print using flexible TPU filament to print a phone case, and then switch to yellow to print a model of a banana. Many filament spools include a feature that allows you to estimate how much filament you have left, but it isn't easy to use and only provides an estimate. Filament minder aims to fix that! I will be creating a website that keeps track of all of your rolls of filament and how much is left on each roll.
 
 ## 🚀 Specification Deliverable
-[This](https://github.com/webprogramming260/startup-example/blob/main/README.md) is a great, inspirational example.
+[This](https://github.com/webprogramming260/startup-example/blob/main/README.md) is a great example.
 
 For this deliverable, I did the following. I checked the box `[x]` and added a description for things I completed.
 
@@ -17,7 +17,7 @@ For this deliverable, I did the following. I checked the box `[x]` and added a d
 
 ### Elevator pitch
 
-Are you tired of not knowing if you have enough filament to complete the cool 3D print you found? Imagine starting a print you are super excited about, only to have the filament run out right before the print finishes. Do you leave it on your printer until the new filament roll arrives? Do you waste the filament you had left? Luckily, with Roll Call, you can avoid this predicament!
+Are you tired of not knowing if you have enough filament to complete the cool 3D print you found? Imagine starting a print you are super excited about, only to have the filament run out right before the print finishes. Do you leave it on your printer until the new filament roll arrives? Do you waste the filament you had left? Luckily, with Roll Call, you can avoid this predicament entirely!
 
 Roll Call is an easy-to-use website that tracks your filament so you don't have to! It allows you to track the amount of filament left on each roll (including color, brand, type, and cost), log print history, and manage your filament stores. 
 
