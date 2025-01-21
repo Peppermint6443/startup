@@ -31,3 +31,11 @@
 * It looks like the react things are created with .jsx files
 * Javascript looks like it reads similarly to Python... not exactly the same though, and it needs semicolons
 * Based on the language breakdown of the repository, there are *a lot* of files that are written in javascript, which makes sense, as a webpage looks a lot better as the interactivity of the webpage increases
+
+## HTML Notes
+#### Structure Codepen
+* It seems like you can pretty much put anything anywhere you want, you just have to follow the structure. For example, I can make any words a link, I just have to add an anchor element with the appropriate tag.
+* Links need to include https://
+* Tables look pretty useful
+* You can also put images in a table, even if the other cells have words
+* html is pretty easy to use, once you know a little bit of the syntax. From there, just put it in the appropriate place in you hierarchy
