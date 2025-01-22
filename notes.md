@@ -53,3 +53,6 @@
 
 #### Simon-html (part 2)
 * deploying programs to your server is actually super easy
+* svg is basically just drawing one line and then telling it what point to connect to
+* links to navigate pages actually just are localized paths that open another file instead of the one you are on
+* the structure to a website can actually be so simple
