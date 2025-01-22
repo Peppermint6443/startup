@@ -39,3 +39,17 @@
 * Tables look pretty useful
 * You can also put images in a table, even if the other cells have words
 * html is pretty easy to use, once you know a little bit of the syntax. From there, just put it in the appropriate place in you hierarchy
+
+#### Input Codepen
+* placeholder = "hello": this is how you add see-through text
+* I forgot to do a close / which messed up formatting down below
+* you can set the default color of the color picker
+* while html might not have super strict formatting requirements, it greatly adds to the readability of your code
+
+#### Media Codepen
+* adding media is pretty easy, the hard part is remembering `<img src = 'path.jpg'/>`, `<video src = 'path2.jpg'>`, etc.
+* adding the `alt` signifier is important for accessibility
+* svg is really powerful, though there is a bit of a learning curve
+
+#### Simon-html (part 2)
+* deploying programs to your server is actually super easy
