@@ -56,3 +56,12 @@
 * svg is basically just drawing one line and then telling it what point to connect to
 * links to navigate pages actually just are localized paths that open another file instead of the one you are on
 * the structure to a website can actually be so simple
+
+#### Startup-html
+* html is fast! it really didn't take very long to get a basic structure down for each page
+* there are a lot of formatting things that I want to do, but I need to be patient and wait to implement CSS
+* without JavaScript, adding interactive things can be difficult
+    * for example, I wanted to add a bunch of different rolls pages, but that can't happen until I have a database and things like that
+* `<hr>` was pretty useful, at least for the initial formatting
+* copying and pasting the header and footer is super useful
+* there is a lot of adding placeholders with html, especially for any extended functionality
