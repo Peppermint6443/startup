@@ -64,7 +64,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
 - [x] **HTML pages** - I have pages, including `index.html`, `dashboard.html`, `roll.html`, `stats.html`, and `about.html`.
-- [x] **Proper HTML element usage** - I used many elements, such as `<nav>`, `<div>`, `<form>`, `<h1>`, etc.
+- [x] **Proper HTML element usage** - I used many elements, such as `<nav>`, `<div>`, `<form>`, `<h1>`, etc. I also used elements like `<head>`, `<body>`, `<main>`, and `<footer>`.
 - [x] **Links** - I have links between each of my pages (clicking on the rolls from the dashboard page even takes you to the roll page!)
 - [x] **Text** - I have a lot of text, some describing the project, some showing the data in the database, etc.
 - [x] **3rd party API placeholder** - I added a spot to put a "3D Print of the Day" from Thingiverse
