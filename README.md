@@ -71,7 +71,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Images** - I did not complete this part of the deliverable.
 - [x] **Login placeholder** - I did not complete this part of the deliverable.
 - [x] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **WebSocket placeholder** - I did not complete this part of the deliverable.
 
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
