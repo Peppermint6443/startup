@@ -63,15 +63,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [x] **HTML pages** - I did not complete this part of the deliverable.
-- [x] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [x] **Links** - I did not complete this part of the deliverable.
-- [x] **Text** - I did not complete this part of the deliverable.
-- [x] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [x] **Images** - I did not complete this part of the deliverable.
-- [x] **Login placeholder** - I did not complete this part of the deliverable.
-- [x] **DB data placeholder** - I did not complete this part of the deliverable.
-- [x] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - I have pages, including `index.html`, `dashboard.html`, `roll.html`, `stats.html`, and `about.html`.
+- [x] **Proper HTML element usage** - I used many elements, such as `<nav>`, `<div>`, `<form>`, `<h1>`, etc.
+- [x] **Links** - I have links between each of my pages (clicking on the rolls from the dashboard page even takes you to the roll page!)
+- [x] **Text** - I have a lot of text, some describing the project, some showing the data in the database, etc.
+- [x] **3rd party API placeholder** - I added a spot to put a "3D Print of the Day" from Thingiverse
+- [x] **Images** - I have pixel art of the rolls of filament.
+- [x] **Login placeholder** - I have a form that accepts a username and a password.
+- [x] **DB data placeholder** - Each roll has data attached to it, and I have a placeholder that displays examples of this data, i.e. filament left, color, brand, etc.
+- [x] **WebSocket placeholder** - I have a placeholder that announces when users finish a roll of filament.
 
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
