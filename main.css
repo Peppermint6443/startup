@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    border: thin black solid;
+    border: thin solid black;
     font-family: serif 'Times New Roman', Times, serif;
 }
 
@@ -17,18 +17,30 @@ header {
     flex: 0 80px;
     background-color: #353cb8;
     color: white;
+    justify-items: center;
 }
 
 main {
     display: flex;
     flex-direction: column;
     flex: 1;
+    background-color: #b6c6ff;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
     flex: 0 40px;
     background-color: #353cb8;
     color: white;
+}
+
+main > h4 {
+    text-align: center;
+    background-color: white;
+    width: 20vw;
+    height: 5vh;
+    align-content: center;      
 }
 
 nav {
@@ -51,6 +63,5 @@ a {
     display: flex;
     flex-direction: row;
     height: 40vh;
-    background-color: white;
     justify-content: center;
 }
