@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    border: thin solid black;
     font-family: serif 'Times New Roman', Times, serif;
 }
 
@@ -14,7 +13,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    flex: 0 80px;
+    flex: 0 0 80px;
     background-color: #353cb8;
     color: white;
     justify-items: center;
@@ -47,8 +46,12 @@ nav > p {
     align-content: center;
 }
 
-a {
-    color: white;
+.form-input {
+    margin: 5px;
+}
+
+.btn {
+    margin: 10px;
 }
 
 .login-box {
@@ -56,6 +59,9 @@ a {
     flex-direction: column;
     width: 60vw;
     height: 30vh;
+    background-color: white;
+    border: solid #888;
+    border-radius: 20px;
 }
 
 .login-box > h4 {
@@ -78,5 +84,14 @@ a {
     display: flex;
     flex-direction: row;
     height: 40vh;
+    width: 40vh;
     justify-content: center;
+    align-items: center;
+    border: solid thin black;
+    margin-top: 20px;
+}
+
+
+a {
+    color: white;
 }
