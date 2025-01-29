@@ -58,10 +58,11 @@ nav > p {
     display: flex;
     flex-direction: column;
     width: 60vw;
-    height: 30vh;
     background-color: white;
     border: solid #888;
     border-radius: 20px;
+    flex: 0 1 30vh;
+    margin: 5px;
 }
 
 .login-box > h4 {
