@@ -35,14 +35,6 @@ footer {
     color: white;
 }
 
-main > h4 {
-    text-align: center;
-    background-color: white;
-    width: 20vw;
-    height: 5vh;
-    align-content: center;      
-}
-
 nav {
     display: flex;
     flex-direction: row;
@@ -57,6 +49,29 @@ nav > p {
 
 a {
     color: white;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 30vh;
+}
+
+.login-box > h4 {
+    text-align: center;
+    height: 10vh;
+    align-content: center;
+    flex: 1;
+    font-size: 40px;
+}
+
+.login-box > form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
 .third-party {
