@@ -65,3 +65,21 @@
 * `<hr>` was pretty useful, at least for the initial formatting
 * copying and pasting the header and footer is super useful
 * there is a lot of adding placeholders with html, especially for any extended functionality
+
+## CSS Notes
+#### Flex Codepen
+* It is really helpful to arrange your .css file in a way similar to your .html file. I didn't at first, and trying to find the proper elements was a nightmare. It was also dificult to make sure that everything nested properly.
+* Keep `justify-content`, `align-content`, `text-align`, all straight. I'm sure I'll get better at it as I practice, but I have to guess and check every time.
+* Order the flex events correctly, and determine your view as you move down the element hierarchy; the `<body>` element should be determined first to ensure everything fits together nicely.
+
+#### Bootstrap Codepen
+* Bootstrap is nice because it takes allows for the use of other people's hard work with styling. It makes beautiful websites
+* I'm probably going to have to spend a decent amount of time exploring the Bootstrap documentation
+* The notification numbers are really cool!
+* Are we limited to only the color scheme offered by Bootstrap?
+* I could potentially use a dropdown for the filament brand!
+
+#### Simon-css
+* The css file that covers all of the files is actually not super long
+* Classes are very useful and should be used liberally
+* Borders make things look a lot better, and they make it look cleaner
