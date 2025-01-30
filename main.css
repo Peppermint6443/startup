@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #353cb8;
+    background-color: #0047ba;
     color: white;
     display: flex;
     flex-direction: row;
@@ -26,14 +26,14 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #b6c6ff;
+    background-color: #a6c6ff;
     justify-content: center;
     align-items: center;
 }
 
 footer {
     flex: 0 40px;
-    background-color: #353cb8;
+    background-color: #0047ba;
     color: white;
 }
 
@@ -93,7 +93,7 @@ nav > p {
 .login-box {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 40vw;
     background-color: white;
     border: solid #888;
     border-radius: 20px;
