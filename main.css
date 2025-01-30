@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     font-family: serif 'Times New Roman', Times, serif;
-    border: thin black solid;
+    /* border: thin black solid; */
 }
 
 body {
@@ -14,7 +16,6 @@ body {
 header {
     background-color: #353cb8;
     color: white;
-
     display: flex;
     flex-direction: row;
     flex: 0 0 80px;
@@ -44,13 +45,24 @@ footer {
     flex: 0 0 200px;
 }
 
+.logo {
+    
+    display: flex;
+    flex: 0 1 100px;
+    width: 100px;
+}
+
 .header-text {
     display: block;
-    text-align: center;
     display: flex;
-    flex: 1;
+    flex: 0 0 100px;
     text-align: center;
     align-content: center;
+    align-items: center;
+    font-family: 'Sixtyfour', sans-serif;
+    font-size: 40px;
+    padding: 0px;
+    margin: 0px;
 }
 
 nav {
@@ -58,14 +70,16 @@ nav {
     flex-direction: row;
     flex: 1;
     align-items: center;
-    height: fill-available;
+    gap: 1px;
+}
+
+nav p:not(:last-child) {
+    border-right: solid white;
 }
 
 nav > p {
     flex: 1 0 40px;
     text-align: center;
-    align-items: flex-end;
-    /* align-items: center; */
 }
 
 .form-input {
@@ -117,4 +131,12 @@ nav > p {
 
 a {
     color: white;
+}
+
+p {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
 }
