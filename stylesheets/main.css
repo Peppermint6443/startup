@@ -26,7 +26,7 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #a6c6ff;
+    background-color: #93bcff;
     justify-content: center;
     align-items: center;
 }
