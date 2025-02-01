@@ -83,3 +83,8 @@
 * The css file that covers all of the files is actually not super long
 * Classes are very useful and should be used liberally
 * Borders make things look a lot better, and they make it look cleaner
+
+#### Startup
+* Hover is actually super easy! And it looks cool and makes the webpage look just that much more professional
+* Picking a color scheme is kind of hard, especially as you do it one color at a time. Picking a palette from the beginning might be significantly easier
+* Modelling your webpage off of other webpages is a good way to get something that looks pretty good! (for example, my stats page is modelled after chess.com)

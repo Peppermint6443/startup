@@ -17,7 +17,8 @@
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color: #bad4ff;
+    /* background-color: #bad4ff; */
+    background-color: #326dcb;
     transition: transform 0.3s ease;
     font-size: 20px;
     text-align: center;
@@ -28,7 +29,8 @@ ion-icon {
 }
 
 .total-cost {
-    color: #409655;
+    /* color: #409655; */
+    color: #60c675;
 }
 
 .completed-rolls {
@@ -36,15 +38,18 @@ ion-icon {
 }
 
 .prints {
-    color: #f77c00;
+    /* color: #f77c00; */
+    color: #ff9933;
 }
 
 .meters {
-    color: #d5c303;
+    /* color: #d5c303; */
+    color: #fce703;
 }
 
 .filament-used {
-    color: #0047ba;
+    /* color: #0047ba; */
+    color: #aec8ff;
 }
 
 .filament-left {

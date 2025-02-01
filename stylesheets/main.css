@@ -26,13 +26,14 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
-    background-color: #93bcff;
+    /* background-color: #93bcff; */
+    background-color: #6e98dc;
     justify-content: center;
     align-items: center;
 }
 
 footer {
-    flex: 0 40px;
+    flex: 0 0 40px;
     background-color: #0047ba;
     color: white;
 }

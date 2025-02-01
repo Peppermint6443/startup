@@ -1,0 +1,12 @@
+main {
+    color: white;
+}
+
+main p {
+    width: 60vw;
+    margin: 20px;
+}
+
+main div {
+    width: 40vw;
+}
