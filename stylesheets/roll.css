@@ -1,0 +1,32 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.roll-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.roll-info-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: center; */
+    margin: 20px;
+    flex: 1 0 40px;
+}
+
+.roll-info {
+    margin-top: 25px;
+    flex: 1;
+}
+
+.roll-info-text {
+    padding: 4px;
+}
