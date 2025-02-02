@@ -2,15 +2,16 @@
 
 .statistics-table {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    grid-auto-rows: 330px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: 350px;
     max-width: 80vw;
     margin-bottom: 4em;
+    gap: 20px;
 }
 
 .stat {
-    height: 300px;
-    width: 300px;
+    height: 330px;
+    width: 330px;
     border: solid black;
     border-radius: 10px;
     display: flex;
