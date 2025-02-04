@@ -31,3 +31,20 @@ main {
 .roll-info-text {
     padding: 4px;
 }
+
+@media (max-aspect-ratio: 1/1) {
+    .roll-info-container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        flex: 1 0 40px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+    }
+  }

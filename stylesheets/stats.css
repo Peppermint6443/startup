@@ -14,11 +14,11 @@
     width: 330px;
     border: solid black;
     border-radius: 10px;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
-    margin: 20px;
-    /* background-color: #bad4ff; */
+    margin-bottom: 20px;
+    margin-top: 20px;
     background-color: #326dcb;
     transition: transform 0.3s ease;
     font-size: 20px;
