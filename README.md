@@ -73,5 +73,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **DB data placeholder** - Each roll has data attached to it, and I have a placeholder that displays examples of this data, i.e. filament left, color, brand, etc.
 - [x] **WebSocket placeholder** - I have a placeholder that announces when users finish a roll of filament.
 
+## 🚀 CSS deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [x] **Header, footer, and main content body** - I created a fixed header and footer, with a flexible main content body that shows all of the unique information for the page
+- [x] **Navigation elements** - Every page has links that take you to the other pages. On a phone, they collapse into a navigation bar (though the button doesn't actually do anything yet, that will come later... turn your phone horizontal to see the navigation links again)
+- [x] **Responsive to window resizing** - Based on the aspect ratio of the screen, the navigation bar dissappears, and the grids on the dashboard and stats pages adjust for the size change. 
+- [x] **Application elements** - Each element is styled by rules on at least one stylesheet, and some are overridden in another sheet to improve the overall look.
+- [x] **Application text content** - I made any text on my website look more presentable and I made it match the aesthetic of the webpage as a whole.
+- [x] **Application images** - I have images in my webpage, some of them are links, and others are there to look pretty
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
