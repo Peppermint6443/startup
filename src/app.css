@@ -15,7 +15,7 @@
     height: 100vh;
 }
 
-header {
+.header {
     background-color: #0047ba;
     color: white;
     display: flex;
