@@ -84,4 +84,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Application text content** - I made any text on my website look more presentable and I made it match the aesthetic of the webpage as a whole.
 - [x] **Application images** - I have images in my webpage, some of them are links, and others are there to look pretty
 
+## 🚀 React part 1: Routing deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Bundled using Vite** - 
+- [ ] **Components** - 
+- [ ] **Router** - 
+
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
