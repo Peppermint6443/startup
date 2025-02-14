@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './roll.css';
+
 export function Roll() {
   return (
     <main className = 'main'>
@@ -7,7 +9,7 @@ export function Roll() {
           <button type = 'button' className = 'btn btn-light'>Add print</button>
       </div>
       <div className = 'roll-info-container'>
-          <div className = 'roll-image'>
+          <div> {/*className = 'roll-image'>*/}
               <span><img src = 'orange.png' width = '300px'/></span>
           </div>
           <div>

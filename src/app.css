@@ -9,6 +9,11 @@
     /* border: thin black solid; */
 }
 
+.main div {
+    width: auto;
+    height: auto;
+}
+
 .body {
     display: flex;
     flex-direction: column;
@@ -180,7 +185,7 @@ h1 {
     display: none;
 }
 
-@media (max-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1.25/1), (max-width: 800px) {
     .nav {
       display: none;
     }

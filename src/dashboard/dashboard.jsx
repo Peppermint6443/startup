@@ -10,11 +10,11 @@ export function Dashboard() {
       <p className = 'wssi'>(↑ Websocket placeholder ↑)</p>
       <button type = 'button' className = 'btn btn-light'>+ Add Roll</button>
       <div className = 'roll-table'>
-          <div><NavLink to = 'roll'><img src = 'red.png' width = '300px' className = 'roll-image'/></NavLink></div>
-          <div><NavLink to = 'roll'><img src = 'yellow.png' width = '300px' className = 'roll-image'/></NavLink></div>
-          <div><NavLink to = 'roll'><img src = 'orange.png' width = '300px' className = 'roll-image'/></NavLink></div>
-          <div><NavLink to = 'roll'><img src = 'blue.png' width = '300px' className = 'roll-image'/></NavLink></div>
-          <div><NavLink to = 'roll'><img src = 'white.png' width = '300px' className = 'roll-image'/></NavLink></div>
+          <div className = 'please-fix-this'><NavLink to = 'roll'><img src = 'red.png' width = '300px' className = 'roll-image'/></NavLink></div>
+          <div className = 'please-fix-this'><NavLink to = 'roll'><img src = 'yellow.png' width = '300px' className = 'roll-image'/></NavLink></div>
+          <div className = 'please-fix-this'><NavLink to = 'roll'><img src = 'orange.png' width = '300px' className = 'roll-image'/></NavLink></div>
+          <div className = 'please-fix-this'><NavLink to = 'roll'><img src = 'blue.png' width = '300px' className = 'roll-image'/></NavLink></div>
+          <div className = 'please-fix-this'><NavLink to = 'roll'><img src = 'white.png' width = '300px' className = 'roll-image'/></NavLink></div>
       </div>
     </main>
   );

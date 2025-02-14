@@ -1,6 +1,6 @@
-main {
+.main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     color: white;
@@ -17,10 +17,10 @@ main {
 .roll-info-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    /* align-items: center; */
+    justify-content: flex-start;
     margin: 20px;
     flex: 1 0 40px;
+    width: 100%;
 }
 
 .roll-info {
