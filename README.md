@@ -88,8 +88,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - 
-- [ ] **Components** - 
-- [ ] **Router** - 
+- [x] **Bundled using Vite** - I used Vite while updating and adjusting my website, so I no longer have to use the 'go live' function of VS Code
+- [x] **Components** - I have a .jsx injection for each of my pages, including login, dashboard, roll, stats, and about.
+- [x] **Router** - I have links in my index.html header that take me to 'pages'
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
