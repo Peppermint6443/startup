@@ -15,6 +15,10 @@
     height: 100vh;
 }
 
+.nav-link {
+    color: white;
+}
+
 .header {
     background-color: #0047ba;
     color: white;
