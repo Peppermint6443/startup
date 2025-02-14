@@ -20,7 +20,7 @@
     margin-bottom: 20px;
     margin-top: 20px;
     background-color: #326dcb;
-    transition: transform 0.3s ease;
+    /* transition: transform 0.3s ease; */
     font-size: 20px;
     text-align: center;
 }
@@ -57,10 +57,10 @@ ion-icon {
     color: white;
 }
 
-.stat:hover {
+/* .stat:hover {
     cursor: pointer;
     transform: scale(1.05);
-}
+} */
 
 .ion-icon2 {
     font-size: 60px;

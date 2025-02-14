@@ -28,7 +28,7 @@
     align-content: center;
 }
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -107,17 +107,20 @@ nav > p {
     border-radius: 20px;
     flex: 0 1 30vh;
     margin: 5px;
+    align-content: center;
+    justify-content: center;
 }
 
-.login-box > h4 {
+.login-box-title {
     text-align: center;
     height: 10vh;
     align-content: center;
     flex: 1;
+    color: black;
     font-size: 40px;
 }
 
-.login-box > form {
+.login-box-form {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -129,6 +132,24 @@ nav > p {
 
 .form-input {
     width: 30vw;
+}
+
+.form-items {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.form-buttons {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 .third-party {

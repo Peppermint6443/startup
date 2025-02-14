@@ -6,10 +6,10 @@
     /* margin-bottom: 4em; */
 }
 
+
 .roll-image {
     height: 300px;
     width: 300px;
-
 }
 
 .roll-link {
@@ -33,4 +33,10 @@
     border-radius: 8px;
     border: solid black;
     word-break: break-word;
+    color: black;
+}
+
+.wssi {
+    width: 60vw;
+    text-align: center;
 }
