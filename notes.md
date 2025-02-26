@@ -88,3 +88,15 @@
 * Hover is actually super easy! And it looks cool and makes the webpage look just that much more professional
 * Picking a color scheme is kind of hard, especially as you do it one color at a time. Picking a palette from the beginning might be significantly easier
 * Modelling your webpage off of other webpages is a good way to get something that looks pretty good! (for example, my stats page is modelled after chess.com)
+
+#### Simon-react-p1 && startup-react
+* only truly loading a single page provides a much smoother experience
+* it was kind of sad to destroy the .html and .css files I worked so hard to create and get working
+* if you aren't careful with how you port over your .html code to .jsx, you will have lots and lots of problems
+
+#### simon-react-p2 && startup-react
+* anything that ever needs to change should be done using Javascript and .jsx
+* this is the step where your website gains a lot of functionality 
+* setting up your structure and creating matching .jsx files can significantly increase your organization and effectiveness
+    * it is important to split up the parent and child scripts, as it will allow for easier debugging
+* it's amazing how much of interactivity is handled with just the React.useState() functionality

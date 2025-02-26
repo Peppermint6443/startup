@@ -92,4 +92,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Components** - I have a .jsx injection for each of my pages, including login, dashboard, roll, stats, and about.
 - [x] **Router** - I have links in my index.html header that take me to 'pages'
 
+## 🚀 React part 2: Reactivity
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **All functionality implemented or mocked out** - 
+- [ ] **Hooks** - 
+
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
