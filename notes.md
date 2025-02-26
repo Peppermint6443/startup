@@ -100,3 +100,4 @@
 * setting up your structure and creating matching .jsx files can significantly increase your organization and effectiveness
     * it is important to split up the parent and child scripts, as it will allow for easier debugging
 * it's amazing how much of interactivity is handled with just the React.useState() functionality
+* if I have any sections that might be empty, I need to make sure I have `if` statements to show a blank section when there is nothing that has been added
