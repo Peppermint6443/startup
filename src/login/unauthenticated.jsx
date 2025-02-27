@@ -15,7 +15,7 @@ export function Unauthenticated(props) {
     }
 
     async function createUser() {
-        localStoreage.setItem('userName', userName);
+        localStorage.setItem('userName', userName);
         props.onLogin(userName);
     }
 
