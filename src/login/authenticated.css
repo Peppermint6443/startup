@@ -1,0 +1,13 @@
+.playerName {
+    color: white;
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  
+
+  .auth-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }

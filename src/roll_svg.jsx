@@ -2,9 +2,10 @@ import React from 'react';
 
 export function RollSvg(props) {
     const color = props.color
+    const classes = props.classes
 
     return (
-        <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className = 'roll-image'>
+        <svg width="300" height="300" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className = {classes}>
             {/* <!-- Background --> */}
             {/* <!-- <rect width="100%" height="100%" fill="#6C9EDC" stroke="black" stroke-width="4"/> --> */}
             

@@ -7,35 +7,56 @@ import { Dashboard } from './dashboard/dashboard';
 import { Roll } from './roll/roll';
 import { Stats } from './stats/stats';
 import { About } from './about/about';
+import { RollSvg } from './roll_svg';
+
+import { AuthState } from './login/authState';
 
 import './app.css';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
   return (
     <BrowserRouter>
         <div className = 'body'>
             <header className = 'header'>
                 <div className = 'menu-icon'><ion-icon name="menu-outline"></ion-icon></div>
                 <h1 className = 'header-text'>
-                    <img src = 'yellow.png' alt = 'logo' className = 'logo'/>
-                    <p className = 'header-text'>Roll Call</p>
+                    <NavLink className = 'nav-link' to = ''><RollSvg color = {'#fce703'} classes = {'logo'} /></NavLink>
+                    <NavLink className = 'nav-link' to = ''><p className = 'header-text'>Roll Call</p></NavLink>
                 </h1>
                 <nav className = 'nav'>
                     <p><NavLink className = 'nav-link' to = ''>Login</NavLink></p>
-                    <p><NavLink className = 'nav-link' to = 'dashboard'>Dashboard</NavLink></p>
-                    <p><NavLink className = 'nav-link' to = 'roll'>Roll</NavLink></p>
-                    <p><NavLink className = 'nav-link' to = 'stats'>Stats</NavLink></p>
+                    {authState === AuthState.Authenticated && (
+                        <p><NavLink className = 'nav-link' to = 'dashboard'>Dashboard</NavLink></p>
+                    )}
+                    {authState === AuthState.Authenticated && (
+                        <p><NavLink className = 'nav-link' to = 'stats'>Stats</NavLink></p>
+                    )}
                     <p><NavLink className = 'nav-link' to = 'about'>About</NavLink></p>
                 </nav>
             </header>
 
             <Routes>
-                <Route path='/' element={<Login />} exact />
-                <Route path='/dashboard' element={<Dashboard />} />
-                <Route path='/roll' element={<Roll />} />
-                <Route path='/stats' element={<Stats />} />
-                <Route path='/about' element={<About />} />
-                <Route path='*' element={<NotFound />} />
+                <Route 
+                    path = '/' 
+                    element = {
+                        <Login 
+                            userName = {userName}
+                            authState = {authState}
+                            onAuthChange = {(userName, authState) => {
+                                setAuthState(authState);
+                                setUserName(userName);
+                            }}
+                        />} 
+                        exact />
+                <Route path = '/dashboard' element={<Dashboard userName = {userName} />} />
+                <Route path = '/roll' element={<Roll />} />
+                <Route path = '/stats' element={<Stats />} />
+                <Route path = '/about' element={<About />} />
+                <Route path = '*' element={<NotFound />} />
             </Routes>
 
             <footer>
