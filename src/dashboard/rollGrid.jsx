@@ -85,8 +85,8 @@ export function RollGrid() {
     return (
         <div className="roll-table table-item">
             {roll_array.map((roll, i) => (
-                <div key={i} className="please-fix-this table-item">
-                    <NavLink to={`roll/${roll.name}`}>
+                <div key = {roll.id} className="please-fix-this table-item">
+                    <NavLink to = {`../roll/${roll.id}`}>
                         <RollSvg color={roll.color} classes="roll-image" />
                         <p className = 'table-text'>{roll.name}</p>
                     </NavLink>
