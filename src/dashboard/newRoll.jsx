@@ -1,6 +1,8 @@
 import React from 'react';
 import './dashboard.css';
 
+import { v4 as uuidv4 } from 'uuid';
+
 export function NewRoll(props) {
     const [roll_array, setRollers] = React.useState([]);
 
@@ -29,6 +31,7 @@ export function NewRoll(props) {
         }
 
         const newRoll = {
+            id: uuidv4(),
             name: rollName.trim(),
             color: rollColorPicker || rollColor, 
             brand: rollBrand.trim(),

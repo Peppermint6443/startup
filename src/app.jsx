@@ -53,7 +53,7 @@ export default function App() {
                         />} 
                         exact />
                 <Route path = '/dashboard' element={<Dashboard userName = {userName} />} />
-                <Route path = '/roll' element={<Roll />} />
+                <Route path = '/roll/:rollId' element={<Roll />} />
                 <Route path = '/stats' element={<Stats />} />
                 <Route path = '/about' element={<About />} />
                 <Route path = '*' element={<NotFound />} />
