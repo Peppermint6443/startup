@@ -5,9 +5,9 @@ export function About() {
   return (
       <main className = 'main'>
         <h4>Introduction</h4>
-        <p>Are you tired of not knowing if you have enough filament to complete the cool 3D print you found? Imagine starting a print you are super excited about, only to have the filament run out right before the print finishes. Do you leave it on your printer until the new filament roll arrives? Do you waste the filament you had left? Luckily, with Roll Call, you can avoid this predicament entirely!</p>
-        <p>Roll Call is an easy-to-use website that tracks your filament so you don't have to! It allows you to track the amount of filament left on each roll (including color, brand, type, and cost), log print history, and manage your filament stores. </p>
-        <p>Don't wait until you ruin another print, let Roll Call take attendance, you focus on creating the next big thing!</p>
+        <p className = 'problem-causer'>Are you tired of not knowing if you have enough filament to complete the cool 3D print you found? Imagine starting a print you are super excited about, only to have the filament run out right before the print finishes. Do you leave it on your printer until the new filament roll arrives? Do you waste the filament you had left? Luckily, with Roll Call, you can avoid this predicament entirely!</p>
+        <p className = 'problem-causer'>Roll Call is an easy-to-use website that tracks your filament so you don't have to! It allows you to track the amount of filament left on each roll (including color, brand, type, and cost), log print history, and manage your filament stores. </p>
+        <p className = 'problem-causer'>Don't wait until you ruin another print, let Roll Call take attendance, you focus on creating the next big thing!</p>
         
         <div>
             <h4>Features</h4>

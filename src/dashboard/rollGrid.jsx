@@ -84,14 +84,26 @@ export function RollGrid() {
 
     return (
         <div className="roll-table table-item">
-            {roll_array.map((roll, i) => (
-                <div key = {roll.id} className="please-fix-this table-item">
-                    <NavLink to = {`../roll/${roll.id}`}>
-                        <RollSvg color={roll.color} classes="roll-image" />
-                        <p className = 'table-text'>{roll.name}</p>
+            {roll_array.map((roll) => {
+                // Encode the roll name for a clean URL
+                const encodedName = encodeURIComponent(roll.name.replace(/\s+/g, '-'));
+    
+                return (
+                    <NavLink 
+                        key={roll.id} 
+                        to={`../roll/${encodedName}`} 
+                        state={{ id: roll.id }} 
+                        className="table-item"
+                    >
+                        <div className="roll-container">
+                            <RollSvg color={roll.color} classes="roll-image" />
+                            <p className="table-text">{roll.name}</p>
+                        </div>
                     </NavLink>
-                </div>
-            ))}
+                );
+            })}
         </div>
     );
+    
+    
 }

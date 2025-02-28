@@ -3,7 +3,7 @@ main {
     padding-top: 24px;
 }
 
-main p {
+.problem-causer {
     width: 60vw;
     margin: 20px;
 }

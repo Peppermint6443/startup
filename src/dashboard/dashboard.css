@@ -88,3 +88,8 @@ div {
 .table-text {
     margin-top: 0px;
 }
+
+.roll-container {
+    width: 270px;
+    height: 270px;
+}

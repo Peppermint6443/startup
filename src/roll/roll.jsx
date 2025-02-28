@@ -1,71 +1,11 @@
-// import React from 'react';
-
-// import { useLocation } from 'react-router-dom';
-
-// import './roll.css';
-
-// export function Roll() {
-//     const location = useLocation();
-//     const roll = location.state?.roll;
-
-//     const [roll_array, setRollers] = React.useState([]);
-    
-//     React.useEffect(() => {
-//         try {
-//             const roll_text = localStorage.getItem('roll-array');
-//             if (roll_text) {
-//                 const parsedRolls = JSON.parse(roll_text);
-//                 if (Array.isArray(parsedRolls)) {
-//                     setRollers(parsedRolls);
-//                 } else {
-//                     console.error("Stored roll-array is not an array");
-//                 }
-//             }
-//         } catch (error) {
-//             console.error("Error parsing roll-array:", error);
-//         }
-//     }, []);
-
-//     // find the roll with the correct name
-//     const rollIndex = roll_array.findIndex((r) => r.name === roll.name);
-//     const rollItem = roll_array[rollIndex];
-
-//     console.log(rollItem);
-
-//     return (
-//         <main className = 'main'>
-//         <div className = 'roll-header'>
-//             <button type = 'button' className = 'btn btn-light'>Add print</button>
-//         </div>
-//         <div className = 'roll-info-container'>
-//             <div> {/*className = 'roll-image'>*/}
-//                 <span><img src = 'orange.png' width = '300px'/></span>
-//             </div>
-//             <div>
-//                 <div className = 'roll-info'>
-//                     <p className = 'roll-info-text'>Filament Left: 80g</p>
-//                     <p className = 'roll-info-text'>Filament Color: Orange</p>
-//                     <p className = 'roll-info-text'>Filament Type: PLA</p>
-//                     <p className = 'roll-info-text'>Filament Diameter: 1.75mm</p>
-//                     <p className = 'roll-info-text'>Filament Brand: Bambu Labs</p>
-//                 </div>
-//                 <div>
-//                     <button type = 'button' className = 'btn btn-light'>View roll history</button>
-//                 </div>
-//             </div>
-//         </div>
-//     </main>
-//     );
-// }
-
-
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 
 import './roll.css';
 
 export function Roll() {
-    const { id } = useParams();  // Get roll ID from the URL
+    const { name } = useParams(); // Get name from the URL
+    const location = useLocation(); // Get ID from the link state
     const [rollArray, setRollArray] = React.useState([]);
     const [rollItem, setRollItem] = React.useState(null);
 
@@ -76,7 +16,20 @@ export function Roll() {
                 const parsedRolls = JSON.parse(rollText);
                 if (Array.isArray(parsedRolls)) {
                     setRollArray(parsedRolls);
-                    const selectedRoll = parsedRolls.find((r) => r.id === id);
+
+                    // Get the roll ID from state if available
+                    let rollId = location.state?.id;
+
+                    // If navigating directly, find the roll by name
+                    if (!rollId) {
+                        const foundRoll = parsedRolls.find(
+                            (r) => encodeURIComponent(r.name.replace(/\s+/g, '-')) === name
+                        );
+                        rollId = foundRoll?.id;
+                    }
+
+                    // Find the correct roll by ID
+                    const selectedRoll = parsedRolls.find((r) => r.id === rollId);
                     setRollItem(selectedRoll);
                 } else {
                     console.error("Stored roll-array is not an array");
@@ -85,7 +38,7 @@ export function Roll() {
         } catch (error) {
             console.error("Error parsing roll-array:", error);
         }
-    }, [id]);
+    }, [name, location.state]); // Re-run when name or state changes
 
     if (!rollItem) {
         return <p>Loading roll data...</p>;
