@@ -88,8 +88,8 @@ export function RollGrid() {
                 <div key={i} className="please-fix-this table-item">
                     <NavLink to={`roll/${roll.name}`}>
                         <RollSvg color={roll.color} classes="roll-image" />
+                        <p className = 'table-text'>{roll.name}</p>
                     </NavLink>
-                    <p className = 'table-item'>{roll.name}</p>
                 </div>
             ))}
         </div>
