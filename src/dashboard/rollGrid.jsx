@@ -1,45 +1,97 @@
-import React from 'react';
+// import React from 'react';
 
+// import './dashboard.css';
+// import { RollSvg } from '../roll_svg';
+
+
+// export function RollGrid() {
+//     const [roll_array, setRollers] = React.useState([]);
+
+//     React.useEffect(() => {
+//         try {
+//             const roll_text = localStorage.getItem('roll-array');
+//             if (roll_text) {
+//                 const parsedRolls = JSON.parse(roll_text);
+//                 if (Array.isArray(parsedRolls)) {
+//                     setRollers(parsedRolls);
+//                 } else {
+//                     console.error("Stored roll-array is not an array");
+//                 }
+//             }
+//         } catch (error) {
+//             console.error("Error parsing roll-array:", error);
+//         }
+//     }, []);
+
+//     const rollItems = [];
+//     if (roll_array.length) {
+//         for (const [i,roll] of roll_array.entries()) {
+//             rollItems.push(
+//                 <div key = {i} className = 'please-fix-this'>
+//                     <NavLink to = {`roll/${roll.name}`}>
+//                     {/* <NavLink to = 'roll/'> */}
+//                         <RollSvg color = {'#000000'} classes = {'roll-image'} />
+//                     </NavLink>
+//                     <p>hello</p>
+//                 </div>
+//             );
+//         }
+//     } else {
+//         console.log('nothing to see here');
+//     }
+    
+//     if (roll_array.length) {
+//         return (
+//             <div className = 'roll-table'>
+//                 {rollItems}
+//             </div>
+//         );
+//     } else {
+//         return (
+//             <p className = 'no-rolls'>Hurry, add your first roll!!</p>
+//         );
+//     }
+// }
+
+
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './dashboard.css';
 import { RollSvg } from '../roll_svg';
-
 
 export function RollGrid() {
     const [roll_array, setRollers] = React.useState([]);
 
     React.useEffect(() => {
-        const roll_array = localStorage.getItem('roll-array');
-        if (roll_array) {
-            setRollers(JSON.parse(scoresText));
+        try {
+            const roll_text = localStorage.getItem('roll-array');
+            if (roll_text) {
+                const parsedRolls = JSON.parse(roll_text);
+                if (Array.isArray(parsedRolls)) {
+                    setRollers(parsedRolls);
+                } else {
+                    console.error("Stored roll-array is not an array");
+                }
+            }
+        } catch (error) {
+            console.error("Error parsing roll-array:", error);
         }
     }, []);
 
-    const rollItems = [];
-    if (roll_array.length) {
-        console.log(1);
-        for (const [i,roll] of roll_array.entries()) {
-            rollItems.push(
-                <div className = 'please-fix-this'>
-                    <NavLink to = 'roll/${roll.name}'>
-                        <RollSvg color = {'roll.color'} classes = {'roll-image'} />
+    if (roll_array.length === 0) {
+        return <p className="no-rolls">Hurry, add your first roll!!</p>;
+    }
+
+    return (
+        <div className="roll-table table-item">
+            {roll_array.map((roll, i) => (
+                <div key={i} className="please-fix-this table-item">
+                    <NavLink to={`roll/${roll.name}`}>
+                        <RollSvg color={roll.color} classes="roll-image" />
                     </NavLink>
-                    <p>{roll.name}</p>
+                    <p className = 'table-item'>{roll.name}</p>
                 </div>
-            );
-        }
-    } else {
-        console.log('nothing to see here');
-    }
-    
-    if (roll_array.length) {
-        return (
-            <div className = 'roll-table'>
-                {rollItems}
-            </div>
-        );
-    } else {
-        return (
-            <p className = 'no-rolls'>Hurry, add your first roll!!</p>
-        );
-    }
+            ))}
+        </div>
+    );
 }
