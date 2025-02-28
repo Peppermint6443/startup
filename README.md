@@ -96,7 +96,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - 
-- [ ] **Hooks** - 
+- [x] **All functionality implemented or mocked out** - The part of this that I am most proud of is the roll functionality; you can now add new rolls of filament, and they will be stored in your browser. Also, the images of the rolls acts as a link that takes you to the page of that roll of filament, displaying the information connected to that roll. I am also proud of the svg replacement for the images I used previously.
+- [x] **Hooks** - I successfully used the React.useState() (a couple of times), as well as the React.useEffect().
+- Things I still want to add to improve the usability:
+    - roll history
+    - add print
+    - edit/delete the roll
+    - all of the .js to handle the statistics calculations
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)

@@ -58,11 +58,13 @@ export function Roll() {
                 </div>
                 <div className = 'roll-data'>
                     <div className="roll-info">
-                        <p className="roll-info-text">Filament Left: {rollItem.filamentLeft}g</p>
+                        <h2 className="roll-info-text roll-name-header">{rollItem.name}</h2>
+                        <p className="roll-info-text">Filament Left: {rollItem.filamentLeft} g</p>
                         <p className="roll-info-text">Filament Color: {rollItem.colorName}</p>
-                        <p className="roll-info-text">Filament Type: {rollItem.type}</p>
-                        <p className="roll-info-text">Filament Diameter: {rollItem.diameter}mm</p>
+                        <p className="roll-info-text">Filament Type: {rollItem.filamentType}</p>
                         <p className="roll-info-text">Filament Brand: {rollItem.brand}</p>
+                        <p className="roll-info-text">Filament Diameter: {rollItem.diameter} mm</p>
+                        <p className="roll-info-text">Date Opened: {rollItem.dateOpened}</p>
                     </div>
                     <div className = 'roll-history roll-header'>
                         <button type="button" className="btn btn-light">View roll history</button>

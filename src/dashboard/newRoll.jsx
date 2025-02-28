@@ -36,6 +36,10 @@ export function NewRoll(props) {
             color: rollColorPicker,
             colorName: rollColor, 
             brand: rollBrand.trim(),
+            filamentRemaining: filamentRemaining.trim(),
+            diameter: diameter.trim(),
+            filamentType: filamentType.trim(),
+            dateOpened: dateOpened.trim()
         };
 
         const newRollArray = [...roll_array, newRoll];
@@ -48,6 +52,10 @@ export function NewRoll(props) {
     const [rollColor, setRollColor] = React.useState('');
     const [rollColorPicker, setRollColorPicker] = React.useState('');
     const [rollBrand, setRollBrand] = React.useState('');
+    const [filamentRemaining, setFilamentRemaining] = React.useState('');
+    const [diameter, setDiameter] = React.useState('');
+    const [filamentType, setFilamentType] = React.useState('');
+    const [dateOpened, setDateOpened] = React.useState('');
 
     return (
         <form className="new-roll-form">
@@ -80,12 +88,49 @@ export function NewRoll(props) {
             <div className="form-items">
                 <input 
                     type="text" 
+                    className="form-input"
+                    placeholder = 'Filament Type' 
+                    value={filamentType} 
+                    onChange={(e) => setFilamentType(e.target.value)} 
+                />
+            </div>            
+            <div className="form-items">
+                <input 
+                    type="text" 
                     className="form-input" 
                     placeholder="Brand" 
                     value={rollBrand} 
                     onChange={(e) => setRollBrand(e.target.value)} 
                 />
             </div>
+            <div className="form-items">
+                <input 
+                    type="text" 
+                    className="form-input"
+                    placeholder = 'Diameter (mm)' 
+                    value={diameter} 
+                    onChange={(e) => setDiameter(e.target.value)} 
+                />
+            </div>
+            <div className="form-items">
+                <input 
+                    type="text" 
+                    className="form-input"
+                    placeholder = 'Filament Amount (g)' 
+                    value={filamentRemaining} 
+                    onChange={(e) => setFilamentRemaining(e.target.value)} 
+                />
+            </div>
+            <div className="form-items">
+                <input 
+                    type="text" 
+                    className="form-input"
+                    placeholder = 'Date Opened' 
+                    value={dateOpened} 
+                    onChange={(e) => setDateOpened(e.target.value)} 
+                />
+            </div>
+
 
             <div className="form-buttons">
                 <button 

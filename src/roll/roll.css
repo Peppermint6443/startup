@@ -32,6 +32,10 @@
 .roll-info {
     margin-top: 25px;
     flex: 1;
+    max-height: 1500px;
+    column-count: 2;
+    column-gap: 20px;
+    overflow: hidden;
 }
 
 .roll-info-text {
@@ -72,4 +76,11 @@
     margin-left: 40px;
     margin-right: 40px;
     width: auto;
+}
+
+h2.roll-name-header {
+    font-size: 48px !important;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: underline white;
 }
