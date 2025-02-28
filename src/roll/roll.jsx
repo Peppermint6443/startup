@@ -59,7 +59,7 @@ export function Roll() {
                 <div className = 'roll-data'>
                     <div className="roll-info">
                         <h2 className="roll-info-text roll-name-header">{rollItem.name}</h2>
-                        <p className="roll-info-text">Filament Left: {rollItem.filamentLeft} g</p>
+                        <p className="roll-info-text">Filament Left: {rollItem.filamentRemaining} g</p>
                         <p className="roll-info-text">Filament Color: {rollItem.colorName}</p>
                         <p className="roll-info-text">Filament Type: {rollItem.filamentType}</p>
                         <p className="roll-info-text">Filament Brand: {rollItem.brand}</p>
