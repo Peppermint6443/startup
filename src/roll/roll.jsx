@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 
+import { RollSvg } from '../roll_svg';
+
 import './roll.css';
 
 export function Roll() {
@@ -45,23 +47,24 @@ export function Roll() {
     }
 
     return (
-        <main className="main">
-            <div className="roll-header">
-                <button type="button" className="btn btn-light">Add print</button>
+        <main className="main-items">
+            <div className = "roll-info-item">
+                <RollSvg color={rollItem.color} classes="roll-image-not-link" />
             </div>
+            
             <div className="roll-info-container">
-                <div>
-                    <span><img src={rollItem.image || 'orange.png'} width="300px" alt={rollItem.name} /></span>
+                <div className="roll-header">
+                    <button type="button" className="btn btn-light">Add print</button>
                 </div>
-                <div>
+                <div className = 'roll-data'>
                     <div className="roll-info">
                         <p className="roll-info-text">Filament Left: {rollItem.filamentLeft}g</p>
-                        <p className="roll-info-text">Filament Color: {rollItem.color}</p>
+                        <p className="roll-info-text">Filament Color: {rollItem.colorName}</p>
                         <p className="roll-info-text">Filament Type: {rollItem.type}</p>
                         <p className="roll-info-text">Filament Diameter: {rollItem.diameter}mm</p>
                         <p className="roll-info-text">Filament Brand: {rollItem.brand}</p>
                     </div>
-                    <div>
+                    <div className = 'roll-history roll-header'>
                         <button type="button" className="btn btn-light">View roll history</button>
                     </div>
                 </div>

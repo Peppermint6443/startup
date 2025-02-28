@@ -1,22 +1,28 @@
-.main {
+.main-items {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
     color: white;
+    flex: 1;
+    /* background-color: #93bcff; */
+    background-color: #6e98dc;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+    /* padding: 24px; */
 }
 
 .roll-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    margin: 10px;
 }
 
 .roll-info-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: flex-start;
     margin: 20px;
     flex: 1 0 40px;
@@ -30,6 +36,7 @@
 
 .roll-info-text {
     padding: 4px;
+    margin-left: 10px;
 }
 
 @media (max-aspect-ratio: 1/1), (max-width: 800px) {
@@ -40,7 +47,7 @@
         flex: 1 0 40px;
     }
 
-    main {
+    .main-items {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -48,3 +55,21 @@
         color: white;
     }
   }
+
+.roll-image-not-link {
+    height: 400px;
+    width: 400px;
+    border: solid black 4px;
+    border-radius: 10px;
+}
+
+.roll-info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    width: auto;
+}

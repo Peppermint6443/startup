@@ -33,7 +33,8 @@ export function NewRoll(props) {
         const newRoll = {
             id: uuidv4(),
             name: rollName.trim(),
-            color: rollColorPicker || rollColor, 
+            color: rollColorPicker,
+            colorName: rollColor, 
             brand: rollBrand.trim(),
         };
 
