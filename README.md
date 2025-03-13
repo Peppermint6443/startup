@@ -104,4 +104,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
     - edit/delete the roll
     - all of the .js to handle the statistics calculations
 
+## 🚀 Service deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
+- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
+- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
+- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
+- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+
+
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
