@@ -64,15 +64,22 @@ export function RollGrid() {
 
     React.useEffect(() => {
         try {
-            const roll_text = localStorage.getItem('roll-array');
-            if (roll_text) {
-                const parsedRolls = JSON.parse(roll_text);
-                if (Array.isArray(parsedRolls)) {
-                    setRollers(parsedRolls);
-                } else {
-                    console.error("Stored roll-array is not an array");
-                }
-            }
+            // update to use service
+            // const roll_text = localStorage.getItem('roll-array');
+            fetch('/api/rolls')
+                .then(response => response.json())
+                .then(data => {
+                    setRollers(data);
+                });
+
+            // if (roll_text) {
+            //     const parsedRolls = JSON.parse(roll_text);
+            //     if (Array.isArray(parsedRolls)) {
+            //         setRollers(parsedRolls);
+            //     } else {
+            //         console.error("Stored roll-array is not an array");
+            //     }
+            // }
         } catch (error) {
             console.error("Error parsing roll-array:", error);
         }

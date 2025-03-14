@@ -8,23 +8,29 @@ export function NewRoll(props) {
 
     React.useEffect(() => {
         try {
-            const roll_text = localStorage.getItem('roll-array');
-            if (roll_text) {
-                const parsedRolls = JSON.parse(roll_text);
-                if (Array.isArray(parsedRolls)) {
-                    setRollers(parsedRolls);
-                } else {
-                    console.error("Stored roll-array is not an array");
-                    setRollers([]);
-                }
-            }
+            // use service
+            // const roll_text = localStorage.getItem('roll-array');
+            // if (roll_text) {
+            //     const parsedRolls = JSON.parse(roll_text);
+            //     if (Array.isArray(parsedRolls)) {
+            //         setRollers(parsedRolls);
+            //     } else {
+            //         console.error("Stored roll-array is not an array");
+            //         setRollers([]);
+            //     }
+            // }
+            fetch('/api/rolls')
+                .then(response => response.json())
+                .then(data => {
+                    setRollers(data);
+                });
         } catch (error) {
             console.error("Error parsing roll-array:", error);
             setRollers([]);
         }
     }, []);
 
-    const addRoll = () => {
+    async function addRoll() {
         if (!rollName.trim()) {
             alert("Please enter a roll name.");
             return;
@@ -44,7 +50,16 @@ export function NewRoll(props) {
 
         const newRollArray = [...roll_array, newRoll];
         setRollers(newRollArray);
-        localStorage.setItem('roll-array', JSON.stringify(newRollArray));
+
+        // update to use service
+        await fetch('/api/addroll', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newRoll),
+        })
+        // localStorage.setItem('roll-array', JSON.stringify(newRollArray));
         props.updateAddRoll(false);
     };
 
