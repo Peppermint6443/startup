@@ -107,5 +107,8 @@
 #### General Notes
 * being able to follow the functions and the calls is very important, and it can be helped greatly by using the debugger
 * if something isn't working, try going on a walk; for some reason the code works when you get back and try again, even though you didn't change anything
+* make sure you know what is being deleted... `DELETE` doesn't necessarily mean you are deleting the account. if you delete authentication, you are just logging out; you delete the cookies, and delete any generated tokens
 
 #### Simon-Service
+* where the login information was previously stored in the local cache, it was transitioned to fetch calls that referenced the service endpoints
+* it seems that if you were careful with how you set up your data manipulation in the previous deliverable, this one shouldn't be too hard
