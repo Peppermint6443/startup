@@ -115,3 +115,4 @@
 
 #### Startup
 * after updating some of the code to use service functionality, I can't get it to fully run. I think this might be because I haven't yet configured login handling or anything like that, so it thinks I am not authorized
+    * this did indeed end up being the case, I updated the unauthorized.jsx and authorized.jsx files and it worked!
