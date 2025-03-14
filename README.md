@@ -108,11 +108,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - 
-- [ ] **Static middleware for frontend** - 
+- [x] **Node.js/Express HTTP service** - Node.js and Express are running rampant in service/index.js, and they are allowing me to create, reference, and use different endpoints
+- [x] **Static middleware for frontend** - I updated all of my frontend code to use the service backend, and I served up my files in the public folder!
 - [ ] **Calls to third party endpoints** - 
-- [ ] **Backend service endpoints** - 
-- [ ] **Frontend calls service endpoints** -
+- [x] **Backend service endpoints** - I have backend endpoints for adding a roll, adding and finding users, logging out, and viewing the rolls; I also have endpoints for future goals, such as roll history (both viewing and creating), deleting a roll, and more
+- [x] **Frontend calls service endpoints** - my frontend calls my backend enpoints and uses them appropriately!
 
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)

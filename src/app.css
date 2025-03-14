@@ -165,10 +165,13 @@ nav > p {
     width: 40vh;
     justify-content: center;
     align-items: center;
-    border: solid thin black;
+    /* border: solid thin black; */
     margin-top: 20px;
 }
 
+.nasa {
+    height: 40vh;
+}
 
 a {
     color: white;
