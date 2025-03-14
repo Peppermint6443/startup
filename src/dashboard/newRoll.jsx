@@ -37,6 +37,7 @@ export function NewRoll(props) {
         }
 
         const newRoll = {
+            owner: localStorage.getItem('userName'),
             id: uuidv4(),
             name: rollName.trim(),
             color: rollColorPicker,

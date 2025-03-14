@@ -69,7 +69,7 @@ export function RollGrid() {
             fetch('/api/rolls')
                 .then(response => response.json())
                 .then(data => {
-                    setRollers(data);
+                    setRollers(data.filter(roll => roll.owner === localStorage.getItem('userName')));
                 });
 
             // if (roll_text) {
