@@ -112,3 +112,6 @@
 #### Simon-Service
 * where the login information was previously stored in the local cache, it was transitioned to fetch calls that referenced the service endpoints
 * it seems that if you were careful with how you set up your data manipulation in the previous deliverable, this one shouldn't be too hard
+
+#### Startup
+* after updating some of the code to use service functionality, I can't get it to fully run. I think this might be because I haven't yet configured login handling or anything like that, so it thinks I am not authorized
