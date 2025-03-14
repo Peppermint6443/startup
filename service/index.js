@@ -103,7 +103,7 @@ apiRouter.get('/rolls', verifyAuth, (_req, res) => {
 
 // add a new roll
 apiRouter.post('/addroll', verifyAuth, (req, res) => {
-    rolls = addRoll(req.body);                                                      // add a function     
+    rolls = addRoll(req.body);                                                      // function     
     res.send(rolls);
 });
 
@@ -115,13 +115,13 @@ apiRouter.get('/rollhistory', verifyAuth, (req, res) => {
 
 // delete a roll
 apiRouter.delete('/roll/delete', verifyAuth, (req, res) => {
-    rolls = deleteRoll(req.body.roll_id);                                           // add a function
+    rolls = deleteRoll(req.body.roll_id);                                           // function
     res.send(rolls);
 });
 
 // add a new roll history
 apiRouter.post('/addrollhistory', verifyAuth, (req, res) => {
-    roll_histories = addRollHistory(req.body);                                      // add a function
+    roll_histories = addRollHistory(req.body);                                      // function
     res.send(roll_histories);
 });
 
