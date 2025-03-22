@@ -114,5 +114,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Backend service endpoints** - I have backend endpoints for adding a roll, adding and finding users, logging out, and viewing the rolls; I also have endpoints for future goals, such as roll history (both viewing and creating), deleting a roll, and more
 - [x] **Frontend calls service endpoints** - my frontend calls my backend enpoints and uses them appropriately!
 
+## 🚀 DB/Login deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **User registration** - 
+- [ ] **User login and logout** - 
+- [ ] **Stores data in MongoDB** - 
+- [ ] **Stores credentials in MongoDB** - 
+- [ ] **Restricts functionality based on authentication** -
+
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
