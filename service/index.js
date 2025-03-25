@@ -112,9 +112,9 @@ apiRouter.get('/rolls', verifyAuth, async (_req, res) => {
 
     // get email from user
     const user_email = user.email;
-    
+
     // get rolls from user
-    userRolls = DB.getRolls(user_email);                                            // function
+    const userRolls = await DB.getRolls(user_email);                                            // function
     // console.log(userRolls);
     res.send(userRolls);
 });

@@ -43,8 +43,8 @@ async function getRolls(user_email) {
     // fix in case the user doesn't have any rolls
     if (!user_email) return [];
     // console.log(`got past not having a user`);
-    result = await rollsCollection.find({ owner: user_email}).toArray();
-    return result;
+    const result = await rollsCollection.find({ owner: user_email });
+    return result.toArray();
 }
 
 async function addRollHistory(rollHistory) {
