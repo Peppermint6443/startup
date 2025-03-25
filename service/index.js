@@ -101,10 +101,21 @@ const verifyAuth = async (req, res, next) => {
     }
 }
 
-// get rolls
-apiRouter.get('/rolls', verifyAuth, (_req, res) => {
+// get rolls 
+apiRouter.get('/rolls', verifyAuth, async (_req, res) => {
     // const userRolls = rolls.filter(roll => roll.email === _req.email);
-    userRolls = DB.getRolls(_req.email);                                            // function
+    // gt token
+    const user_token = _req.cookies.token;
+
+    // get user from token
+    const user = await findUser('token', user_token);                               // function
+
+    // get email from user
+    const user_email = user.email;
+    
+    // get rolls from user
+    userRolls = DB.getRolls(user_email);                                            // function
+    // console.log(userRolls);
     res.send(userRolls);
 });
 

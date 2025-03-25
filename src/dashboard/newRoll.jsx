@@ -49,8 +49,9 @@ export function NewRoll(props) {
             dateOpened: dateOpened.trim()
         };
 
-        const newRollArray = [...roll_array, newRoll];
-        setRollers(newRollArray);
+        // const newRollArray = [...roll_array, newRoll];
+
+        // setRollers(newRollArray);
 
         // update to use service
         await fetch('/api/addroll', {

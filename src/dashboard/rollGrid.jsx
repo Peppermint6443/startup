@@ -69,8 +69,13 @@ export function RollGrid() {
             fetch('/api/rolls')
                 .then(response => response.json())
                 .then(data => {
-                    setRollers(data.filter(roll => roll.owner === localStorage.getItem('userName')));
+                    if (Array.isArray(data)) {
+                        setRollers(data);
+                    } else {
+                        console.error("Expected an array but got:", data);
+                    }
                 });
+                
 
             // if (roll_text) {
             //     const parsedRolls = JSON.parse(roll_text);
