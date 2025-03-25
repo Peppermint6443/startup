@@ -118,6 +118,10 @@
     * this did indeed end up being the case, I updated the unauthorized.jsx and authorized.jsx files and it worked!
 
 ## Database Notes
+#### General Notes
 * Adding another service to your domain isn't too hard, not as hard as I thought it would be
 * Storing data on your server is a pretty bad idea, unless you're alright with getting charged a ton of extra money
 * You can probably have a cluster per webpage, that's probably what I will do, that way each document can hold a different list of items/data
+
+#### startup notes
+* implementing this actually shouldn't be too bad, as all you have to do is change the function call
