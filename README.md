@@ -118,11 +118,11 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - 
-- [ ] **User login and logout** - 
-- [ ] **Stores data in MongoDB** - 
-- [ ] **Stores credentials in MongoDB** - 
-- [ ] **Restricts functionality based on authentication** -
+- [x] **User registration** - registering a new user saves credentials to the database
+- [x] **User login and logout** - logging in and logging out saves and deletes tokens
+- [x] **Stores data in MongoDB** - roll information is saved in the database
+- [x] **Stores credentials in MongoDB** - login email and password information is stored in the database so it can be referenced later
+- [x] **Restricts functionality based on authentication** - you can only access the dashboard if you are logged in (if you use the url, you can access the dashboard page, but adding rolls doesn't do anything and they don't show up anywhere)
 
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)
