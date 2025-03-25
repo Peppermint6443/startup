@@ -6,6 +6,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
+const DB = require('./database');
 
 // initialize things
 const app = express();
@@ -57,6 +58,9 @@ apiRouter.post('/auth/login', async (req, res) => {
             //create and set the user's token
             user.token = uuid.v4();
 
+            // update the user's token in the database
+            await DB.updateUser(user);
+
             // set the cookie
             setAuthCookie(res, user.token);                                         // function
 
@@ -76,6 +80,8 @@ apiRouter.delete('/auth/logout', async (req, res) => {
     // delete the user's token
     if (user) {
         delete user.token;
+
+        DB.updateUser(user);
     }
 
     // clear the cookie
@@ -97,7 +103,8 @@ const verifyAuth = async (req, res, next) => {
 
 // get rolls
 apiRouter.get('/rolls', verifyAuth, (_req, res) => {
-    const userRolls = rolls.filter(roll => roll.email === _req.email);
+    // const userRolls = rolls.filter(roll => roll.email === _req.email);
+    userRolls = DB.getRolls(_req.email);                                            // function
     res.send(userRolls);
 });
 
@@ -109,7 +116,8 @@ apiRouter.post('/addroll', verifyAuth, (req, res) => {
 
 // get roll history for a single roll
 apiRouter.get('/rollhistory', verifyAuth, (req, res) => {
-    const rollHistory = roll_histories.filter(roll => roll.roll_id === req.body.roll_id);
+    // const rollHistory = roll_histories.filter(roll => roll.roll_id === req.body.roll_id);
+    rollHistory = DB.getRollHistory(req.body.roll_id);                              // function
     res.send(rollHistory);
 });
 
@@ -121,7 +129,8 @@ apiRouter.delete('/roll/delete', verifyAuth, (req, res) => {
 
 // add a new roll history
 apiRouter.post('/addrollhistory', verifyAuth, (req, res) => {
-    roll_histories = addRollHistory(req.body);                                      // function
+    // roll_histories = addRollHistory(req.body);      
+    DB.addRollHistory(req.body);                                                    // function
     res.send(roll_histories);
 });
 
@@ -151,7 +160,8 @@ async function createUser(email, password) {
     };
 
     // add user to array
-    users.push(user);
+    // users.push(user);
+    DB.addUser(user);                                                               // function
 
     return user;
 }
@@ -161,7 +171,11 @@ async function findUser(field, value) {
     if (!value) return null;
 
     // find the user
-    return users.find((u) => u[field] === value);
+    // return users.find((u) => u[field] === value);
+    if (field === 'token') {
+        return DB.getUserbyToken(value);                                            // function
+    }
+    return DB.getUser(value);                                                        // function
 }
 
 // function to set the auth cookie
@@ -175,20 +189,23 @@ function setAuthCookie(res, authToken) {
 
 // function to add a roll
 function addRoll(newRoll) {
-    rolls.push(newRoll);
+    // rolls.push(newRoll);
+    DB.addRoll(newRoll);
     return rolls;
 }
 
 // function to add a roll history
 function addRollHistory(newRollHistory) {
-    roll_histories.push(newRollHistory);
+    // roll_histories.push(newRollHistory);
+    DB.addRollHistory(newRollHistory);
     return roll_histories;
 }
 
 // function to delete a roll
 function deleteRoll(roll_id) {
-    rolls = rolls.filter(roll => roll.roll_id !== roll_id);
-    roll_histories = roll_histories.filter(roll => roll.roll_id !== roll_id);
+    // rolls = rolls.filter(roll => roll.roll_id !== roll_id);
+    // roll_histories = roll_histories.filter(roll => roll.roll_id !== roll_id);
+    DB.deleteRoll(roll_id);
     return rolls;
 }
 

@@ -51,6 +51,10 @@ async function getRollHistory(roll) {
     return await rollHistoryCollection.find({ roll: roll }).toArray();
 }
 
+async function deleteRoll(roll_id) {
+    return await rollsCollection.deleteOne({ roll_id: roll_id });
+}
+
 module.exports = {
     getUser,
     getUserbyToken,
@@ -59,5 +63,6 @@ module.exports = {
     addRoll,
     getRolls,
     addRollHistory,
-    getRollHistory
+    getRollHistory,
+    deleteRoll,
 };
