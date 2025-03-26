@@ -39,6 +39,10 @@ async function addRoll(roll) {
     return await rollsCollection.insertOne(roll); 
 }
 
+async function findRoll(roll_id) {
+    return await rollsCollection.findOne({ id: roll_id });
+}
+
 async function getRolls(user_email) {
     // fix in case the user doesn't have any rolls
     if (!user_email) return [];
@@ -59,6 +63,10 @@ async function deleteRoll(roll_id) {
     return await rollsCollection.deleteOne({ roll_id: roll_id });
 }
 
+async function updateRoll(roll_id, update_field, value) {
+    return await rollsCollection.updateOne({ roll_id: roll_id }, { $set: { [update_field]: value } });
+}
+
 module.exports = {
     getUser,
     getUserbyToken,
@@ -69,4 +77,6 @@ module.exports = {
     addRollHistory,
     getRollHistory,
     deleteRoll,
+    updateRoll,
+    findRoll
 };

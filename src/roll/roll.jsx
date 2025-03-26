@@ -2,6 +2,8 @@ import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 
 import { RollSvg } from '../roll_svg';
+import { NewPrint } from './newPrint';
+import { AddPrint } from './addPrint';
 
 import './roll.css';
 
@@ -10,33 +12,10 @@ export function Roll() {
     const location = useLocation(); // Get ID from the link state
     const [rollArray, setRollArray] = React.useState([]);
     const [rollItem, setRollItem] = React.useState(null);
+    const [addPrint, updateTheAddPrint] = React.useState(false);
 
     React.useEffect(() => {
         try {
-            // const rollText = localStorage.getItem('roll-array');
-            // if (rollText) {
-            //     const parsedRolls = JSON.parse(rollText);
-            //     if (Array.isArray(parsedRolls)) {
-            //         setRollArray(parsedRolls);
-
-            //         // Get the roll ID from state if available
-            //         let rollId = location.state?.id;
-
-            //         // If navigating directly, find the roll by name
-            //         if (!rollId) {
-            //             const foundRoll = parsedRolls.find(
-            //                 (r) => encodeURIComponent(r.name.replace(/\s+/g, '-')) === name
-            //             );
-            //             rollId = foundRoll?.id;
-            //         }
-
-            //         // Find the correct roll by ID
-            //         const selectedRoll = parsedRolls.find((r) => r.id === rollId);
-            //         setRollItem(selectedRoll);
-            //     } else {
-            //         console.error("Stored roll-array is not an array");
-            //     }
-            // }
 
             // update to use service instead of local storage
             fetch('/api/rolls')
@@ -74,25 +53,35 @@ export function Roll() {
                 <RollSvg color={rollItem.color} classes="roll-image-not-link" />
             </div>
             
-            <div className="roll-info-container">
-                <div className="roll-header">
-                    <button type="button" className="btn btn-light">Add print</button>
-                </div>
-                <div className = 'roll-data'>
-                    <div className="roll-info">
-                        <h2 className="roll-info-text roll-name-header">{rollItem.name}</h2>
-                        <p className="roll-info-text">Filament Left: {rollItem.filamentRemaining} g</p>
-                        <p className="roll-info-text">Filament Color: {rollItem.colorName}</p>
-                        <p className="roll-info-text">Filament Type: {rollItem.filamentType}</p>
-                        <p className="roll-info-text">Filament Brand: {rollItem.brand}</p>
-                        <p className="roll-info-text">Filament Diameter: {rollItem.diameter} mm</p>
-                        <p className="roll-info-text">Date Opened: {rollItem.dateOpened}</p>
+            {/* if not adding a roll */}
+            { addPrint === false && 
+                <div className="roll-info-container">
+                    <AddPrint 
+                        updateAddPrint = {(a) => updateTheAddPrint(a)}
+                    />
+                    <div className = 'roll-data'>
+                        <div className="roll-info">
+                            <h2 className="roll-info-text roll-name-header">{rollItem.name}</h2>
+                            <p className="roll-info-text">Filament Left: {rollItem.filamentRemaining} g</p>
+                            <p className="roll-info-text">Filament Color: {rollItem.colorName}</p>
+                            <p className="roll-info-text">Filament Type: {rollItem.filamentType}</p>
+                            <p className="roll-info-text">Filament Brand: {rollItem.brand}</p>
+                            <p className="roll-info-text">Filament Diameter: {rollItem.diameter} mm</p>
+                            <p className="roll-info-text">Date Opened: {rollItem.dateOpened}</p>
+                        </div>
+                        <div className = 'roll-history roll-header'>
+                            <button type="button" className="btn btn-light">View roll history</button>
+                        </div>
                     </div>
-                    <div className = 'roll-history roll-header'>
-                        <button type="button" className="btn btn-light">View roll history</button>
-                    </div>
                 </div>
-            </div>
+            }
+
+            {/* if adding a roll  */}
+            { addPrint === true &&
+                <NewPrint 
+                    updateAddPrint = {(a) => updateTheAddPrint(a)}
+                />
+            }
         </main>
     );
 }

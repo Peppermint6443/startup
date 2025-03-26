@@ -125,6 +125,33 @@ apiRouter.post('/addroll', verifyAuth, (req, res) => {
     res.send(rolls);
 });
 
+// update a roll
+apiRouter.put('/roll/update', verifyAuth, (req, res) => {
+    console.log(req.body);
+
+    // find the roll
+    const roll = DB.findRoll(req.body.id);                                      // function
+
+    if (!roll) {
+        res.status(404).send({ msg: 'Roll not found' });
+        return;
+    }
+
+    // update the roll
+    roll.name = req.body.name;
+    roll.color = req.body.color;
+    roll.brand = req.body.brand;
+    roll.initialFilament = req.body.initialFilament;
+    roll.filamentRemaining = req.body.filamentRemaining;
+    roll.diameter = req.body.diameter;
+    roll.filamentType = req.body.filamentType;
+    roll.dateOpened = req.body.dateOpened;
+
+    updateRoll(roll,filamentRemaining);
+
+    res.send(roll);
+});
+
 // get roll history for a single roll
 apiRouter.get('/rollhistory', verifyAuth, (req, res) => {
     // const rollHistory = roll_histories.filter(roll => roll.roll_id === req.body.roll_id);
@@ -141,7 +168,7 @@ apiRouter.delete('/roll/delete', verifyAuth, (req, res) => {
 // add a new roll history
 apiRouter.post('/addrollhistory', verifyAuth, (req, res) => {
     // roll_histories = addRollHistory(req.body);      
-    DB.addRollHistory(req.body);                                                    // function
+    addRollHistory(req.body);                                                    // function
     res.send(roll_histories);
 });
 
@@ -217,6 +244,16 @@ function deleteRoll(roll_id) {
     // rolls = rolls.filter(roll => roll.roll_id !== roll_id);
     // roll_histories = roll_histories.filter(roll => roll.roll_id !== roll_id);
     DB.deleteRoll(roll_id);
+    return rolls;
+}
+
+// function to update a roll
+function updateRoll(roll, update_field) {
+    roll_id = roll.roll_id
+
+    value = roll[update_field];
+    
+    DB.updateRoll(roll_id, update_field, value);
     return rolls;
 }
 

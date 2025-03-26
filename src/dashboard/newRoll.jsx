@@ -8,17 +8,6 @@ export function NewRoll(props) {
 
     React.useEffect(() => {
         try {
-            // use service
-            // const roll_text = localStorage.getItem('roll-array');
-            // if (roll_text) {
-            //     const parsedRolls = JSON.parse(roll_text);
-            //     if (Array.isArray(parsedRolls)) {
-            //         setRollers(parsedRolls);
-            //     } else {
-            //         console.error("Stored roll-array is not an array");
-            //         setRollers([]);
-            //     }
-            // }
             fetch('/api/rolls')
                 .then(response => response.json())
                 .then(data => {
@@ -43,6 +32,7 @@ export function NewRoll(props) {
             color: rollColorPicker,
             colorName: rollColor, 
             brand: rollBrand.trim(),
+            initialFilament: initialFilament.trim(),
             filamentRemaining: filamentRemaining.trim(),
             diameter: diameter.trim(),
             filamentType: filamentType.trim(),
@@ -69,6 +59,7 @@ export function NewRoll(props) {
     const [rollColor, setRollColor] = React.useState('');
     const [rollColorPicker, setRollColorPicker] = React.useState('');
     const [rollBrand, setRollBrand] = React.useState('');
+    const [initialFilament, setInitialFilament] = React.useState('');
     const [filamentRemaining, setFilamentRemaining] = React.useState('');
     const [diameter, setDiameter] = React.useState('');
     const [filamentType, setFilamentType] = React.useState('');
@@ -135,7 +126,10 @@ export function NewRoll(props) {
                     className="form-input"
                     placeholder = 'Filament Amount (g)' 
                     value={filamentRemaining} 
-                    onChange={(e) => setFilamentRemaining(e.target.value)} 
+                    onChange={(e) => {
+                        setFilamentRemaining(e.target.value); 
+                        setInitialFilament(e.target.value);
+                    }}
                 />
             </div>
             <div className="form-items">
