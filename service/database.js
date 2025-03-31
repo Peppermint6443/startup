@@ -64,7 +64,7 @@ async function deleteRoll(roll_id) {
 }
 
 async function updateRoll(roll_id, update_field, value) {
-    return await rollsCollection.updateOne({ roll_id: roll_id }, { $set: { [update_field]: value } });
+    return await rollsCollection.updateOne({ id: roll_id }, { $set: { [update_field]: value } });
 }
 
 module.exports = {
@@ -78,5 +78,5 @@ module.exports = {
     getRollHistory,
     deleteRoll,
     updateRoll,
-    findRoll
+    findRoll,
 };

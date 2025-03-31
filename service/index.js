@@ -126,11 +126,11 @@ apiRouter.post('/addroll', verifyAuth, (req, res) => {
 });
 
 // update a roll
-apiRouter.put('/roll/update', verifyAuth, (req, res) => {
+apiRouter.put('/roll/update', verifyAuth, async (req, res) => {
     console.log(req.body);
 
     // find the roll
-    const roll = DB.findRoll(req.body.id);                                      // function
+    const roll = await DB.findRoll(req.body.id);                                      // function
 
     if (!roll) {
         res.status(404).send({ msg: 'Roll not found' });
@@ -147,9 +147,9 @@ apiRouter.put('/roll/update', verifyAuth, (req, res) => {
     roll.filamentType = req.body.filamentType;
     roll.dateOpened = req.body.dateOpened;
 
-    updateRoll(roll,filamentRemaining);
+    const roll2 = await updateRoll(roll,'filamentRemaining');
 
-    res.send(roll);
+    res.send(roll2);
 });
 
 // get roll history for a single roll
@@ -248,13 +248,13 @@ function deleteRoll(roll_id) {
 }
 
 // function to update a roll
-function updateRoll(roll, update_field) {
-    roll_id = roll.roll_id
+async function updateRoll(roll, update_field) {
+    roll_id = roll.id
 
     value = roll[update_field];
     
     DB.updateRoll(roll_id, update_field, value);
-    return rolls;
+    return roll;
 }
 
 

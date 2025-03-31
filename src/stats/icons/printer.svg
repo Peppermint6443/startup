@@ -1,0 +1,9 @@
+<svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+  <rect width='300' height='350' x='50' y='25' rx='4' ry='4' fill='transparent' stroke='black' stroke-width='4'/>
+  <rect width='250' height='250' x='75' y='75' rx='2' ry='2' fill='transparent' stroke='black' stroke-width='4'/>
+  <rect width='50' height='30' x='175' y='75' rx='2' ry='2' fill='transparent' stroke='black' stroke-width='4'/>
+  <polygon points='195,105 195,110 199,115 201,115 205,110 205,105'/>
+  <polygon points='78,225 322,225 275,175 125,175' fill='transparent' stroke='black' stroke-width='4'/>
+  <rect width='244' height='5' x='78' y='225' rx='2' ry='2' fill='transparent' stroke='black' stroke-width='4'/>
+</svg>
