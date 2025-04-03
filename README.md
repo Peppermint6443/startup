@@ -124,5 +124,14 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Stores credentials in MongoDB** - login email and password information is stored in the database so it can be referenced later
 - [x] **Restricts functionality based on authentication** - you can only access the dashboard if you are logged in (if you use the url, you can access the dashboard page, but adding rolls doesn't do anything and they don't show up anywhere)
 
+## 🚀 WebSocket deliverable
+
+For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
+
+- [ ] **Backend listens for WebSocket connection** - 
+- [ ] **Frontend makes WebSocket connection** - 
+- [ ] **Data sent over WebSocket connection** - 
+- [ ] **WebSocket data displayed** - 
+- [ ] **Application is fully functional** - 
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)

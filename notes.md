@@ -128,3 +128,7 @@
     * theoretically
     * wow that was way harder than I was expecting... I need to be really careful with what datatypes I 1) pass into a function, 2) the function wants, 3) the functions return, 4) the program wants
     * also, not declaring things with `const` was the death of me
+
+## Websocket
+#### Notes from the Github
+* Websocket allows the communciation to go both directions
