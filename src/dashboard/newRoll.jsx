@@ -1,10 +1,12 @@
 import React from 'react';
 import './dashboard.css';
+import { PrintNotifier } from './printNotifier';
 
 import { v4 as uuidv4 } from 'uuid';
 
 export function NewRoll(props) {
     const [roll_array, setRollers] = React.useState([]);
+    const userName = localStorage.getItem('userName') || 'unknown';
 
     React.useEffect(() => {
         try {
@@ -52,6 +54,7 @@ export function NewRoll(props) {
             body: JSON.stringify(newRoll),
         })
         // localStorage.setItem('roll-array', JSON.stringify(newRollArray));
+        PrintNotifier.broadcastEvent(userName, 'roll', newRoll);
         props.updateAddRoll(false);
     };
 

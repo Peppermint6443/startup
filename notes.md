@@ -137,3 +137,4 @@
 
 #### General notes
 * I need to be careful to install all packages before trying to run or deploy anything, as it breaks and won't work
+* be very careful when looking through example code, don't just assume you know what is going on. I had to look at the Simon example a couple of times and parse through the entire thing just to understand it

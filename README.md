@@ -128,10 +128,10 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - 
-- [ ] **Frontend makes WebSocket connection** - 
-- [ ] **Data sent over WebSocket connection** - 
-- [ ] **WebSocket data displayed** - 
-- [ ] **Application is fully functional** - 
+- [x] **Backend listens for WebSocket connection** - My backend has a file that handles anything websocket, and the main service.js interfaces with this functionality
+- [X] **Frontend makes WebSocket connection** - The connection is successfully made.
+- [X] **Data sent over WebSocket connection** - Name of either the roll or the print is displayed!
+- [X] **WebSocket data displayed** - When you add either a print or a new roll, anyone else on the dashboard page sees a message describing it!
+- [X] **Application is fully functional** - You can add rolls and prints!
 
 Information on future deliverables is available in [future_deliverables.md](future_deliverables.md)

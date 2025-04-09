@@ -128,7 +128,7 @@ apiRouter.post('/addroll', verifyAuth, (req, res) => {
 
 // update a roll
 apiRouter.put('/roll/update', verifyAuth, async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
 
     // find the roll
     const roll = await DB.findRoll(req.body.id);                                      // function

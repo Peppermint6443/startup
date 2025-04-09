@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 
 import { RollSvg } from '../roll_svg';
+import { PrintNotifier } from '../dashboard/printNotifier';
 
 import { v4 as uuidv4 } from 'uuid';
 
@@ -18,6 +19,8 @@ export function NewPrint(props) {
     const [printDate, setPrintDate] = React.useState('');
     const [filamentUsed, setFilamentUsed] = React.useState('');
     const [printNotes, setPrintNotes] = React.useState('');
+
+    const userName = localStorage.getItem('userName') || 'unknown';
 
 
     React.useEffect(() => {
@@ -77,6 +80,7 @@ export function NewPrint(props) {
             body: JSON.stringify(newPrint),
         })
   
+        PrintNotifier.broadcastEvent(userName, 'print', newPrint);
         props.updateAddPrint(false);
     };
 
