@@ -13,6 +13,8 @@ export function Roll() {
     const [rollArray, setRollArray] = React.useState([]);
     const [rollItem, setRollItem] = React.useState(null);
     const [addPrint, updateTheAddPrint] = React.useState(false);
+    const [dispHist, updateDispHist] = React.useState(false);
+    const [history, setRollHistory] = React.useState([]);
 
     React.useEffect(() => {
         try {
@@ -38,6 +40,37 @@ export function Roll() {
                     const selectedRoll = data.find((r) => r.id === rollId);
                     setRollItem(selectedRoll);
                 })
+
+                // await fetch('/api/addrollhistory', {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json',
+                //     },
+                //     body: JSON.stringify(newPrint),
+                // })
+
+            fetch(`/api/rollhistory?id=${encodeURIComponent(location.state?.id)}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Get the roll ID from state if available
+                    let rollId = location.state?.id;
+
+                    // If navigating directly, find the roll by name
+                    if (!rollId) {
+                        const foundRoll = data.find(
+                            (r) => encodeURIComponent(r.name.replace(/\s+/g, '-')) === name
+                        );
+                        rollId = foundRoll?.id;
+                    }
+                    
+                    // const histories = data.find((r) => r.id === rollId);
+                    setRollHistory(data);
+                });
         } catch (error) {
             console.error("Error parsing roll-array:", error);
         }
@@ -45,6 +78,15 @@ export function Roll() {
 
     if (!rollItem) {
         return <p>Loading roll data...</p>;
+    }
+
+    function toggleHistory() {
+        if (dispHist === false) {
+            updateDispHist(true);
+        }
+        else {
+            updateDispHist(false);
+        }
     }
 
     return (
@@ -69,9 +111,28 @@ export function Roll() {
                             <p className="roll-info-text">Filament Diameter: {rollItem.diameter} mm</p>
                             <p className="roll-info-text">Date Opened: {rollItem.dateOpened}</p>
                         </div>
-                        <div className = 'roll-history roll-header'>
-                            <button type="button" className="btn btn-light">View roll history</button>
-                        </div>
+                        { dispHist === true &&
+                            <div className="roll-history">
+                                <div className = 'roll-history roll-header'>
+                                    <button type="button" className="btn btn-light" onClick={() => toggleHistory()}>Hide roll history</button>
+                                </div>
+                                <div className = 'roll-history'>
+                                    <h3 className="roll-hist-header">Roll History</h3>
+                                    {history.map((item, index) => (
+                                        <div key={index} className="roll-history-item">
+                                            <p className="roll-info-text">{item.name}</p>
+                                            <p className="roll-info-text">Filament Used: {item.filamentUsed} g</p>
+                                            <p className="roll-info-text">Date: {item.date}</p>
+                                            <p className="roll-info-text">Notes: {item.printNotes}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        }
+                        { dispHist === false &&
+                            <div className = 'roll-history roll-header'>
+                                <button type="button" className="btn btn-light" onClick={() => toggleHistory()}>View roll history</button>
+                            </div>} 
                     </div>
                 </div>
             }

@@ -55,8 +55,9 @@ async function addRollHistory(rollHistory) {
     return await rollHistoryCollection.insertOne(rollHistory);
 }
 
-async function getRollHistory(roll) {
-    return await rollHistoryCollection.find({ roll: roll }).toArray();
+async function getRollHistory(roll_identifier) {
+    const result = await rollHistoryCollection.find({ rollId: roll_identifier });
+    return result.toArray();
 }
 
 async function deleteRoll(roll_id) {

@@ -120,6 +120,14 @@ apiRouter.get('/rolls', verifyAuth, async (_req, res) => {
     res.send(userRolls);
 });
 
+// get roll history for a single roll
+apiRouter.get('/rollhistory', verifyAuth, async (req, res) => {
+    // const rollHistory = roll_histories.filter(roll => roll.roll_id === req.body.roll_id);
+    const roll_identifier = String(req.query.id); // get the roll id from the query string
+    const rollHistory = await DB.getRollHistory(roll_identifier);                              // function
+    res.send(rollHistory);
+});
+
 // add a new roll
 apiRouter.post('/addroll', verifyAuth, (req, res) => {
     rolls = addRoll(req.body);                                                      // function     
@@ -153,16 +161,9 @@ apiRouter.put('/roll/update', verifyAuth, async (req, res) => {
     res.send(roll2);
 });
 
-// get roll history for a single roll
-apiRouter.get('/rollhistory', verifyAuth, (req, res) => {
-    // const rollHistory = roll_histories.filter(roll => roll.roll_id === req.body.roll_id);
-    rollHistory = DB.getRollHistory(req.body.roll_id);                              // function
-    res.send(rollHistory);
-});
-
 // delete a roll
 apiRouter.delete('/roll/delete', verifyAuth, (req, res) => {
-    rolls = deleteRoll(req.body.roll_id);                                           // function
+    const rolls = deleteRoll(req.body.roll_id);                                           // function
     res.send(rolls);
 });
 

@@ -1,4 +1,4 @@
-const { WebSocketServer } = require('ws');
+const { WebSocketServer, WebSocket } = require('ws');
 
 function peerProxy(httpServer) {
     // create the websocket server object
@@ -11,7 +11,7 @@ function peerProxy(httpServer) {
         // forward messages to the service
         socket.on('message', function message(data) {
             socketServer.clients.forEach((client) => {
-                if (client.readyState === client.OPEN) {
+                if (client.readyState === WebSocket.OPEN) {
                     client.send(data);
                 }
             });
@@ -32,14 +32,6 @@ function peerProxy(httpServer) {
             client.ping();
         });
     }, 10000); // 10 seconds
-
-    // log clients connecting or disconnecting
-    socketServer.on('connection', (socket) => {
-        console.log('Client connected');
-        socket.on('close', () => {
-            console.log('Client disconnected');
-        });
-    });
 }
 
 module.exports = { peerProxy };
