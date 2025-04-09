@@ -134,3 +134,6 @@
 * Websocket allows the communciation to go both directions
 * It's really cool that we can just pass messages back and forth like that, it's super cool! 
 * I might be able to get my Websocket to announce stats, but for now I'll probably just get it to announce when you print something
+
+#### General notes
+* I need to be careful to install all packages before trying to run or deploy anything, as it breaks and won't work

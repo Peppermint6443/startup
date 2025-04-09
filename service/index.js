@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const DB = require('./database');
+const { peerProxy } = require('./ws_proxy');
 
 // initialize things
 const app = express();
@@ -259,6 +260,9 @@ async function updateRoll(roll, update_field) {
 
 
 // start the server and listen for requests
-app.listen(port, () => {
+const httpService = app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+// create the websocket server
+peerProxy(httpService);
